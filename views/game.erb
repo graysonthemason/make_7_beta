@@ -1,5 +1,8 @@
 
 <div class="player1_tiles">
+	<% if $turn %>
+	<img class="left_image" width=60px src="images/Ok-icon.png">
+	<% end %>
 	<ul class="playername"><span class="name"><%="#{$player1_name}"%></span>
 		<br><br>
 		Tiles Left
@@ -11,6 +14,9 @@
 	</ul>
 </div>
 <div class="player2_tiles">
+	<% unless $turn %>
+	<img class="right_image" width=60px src="images/Ok-icon.png">
+	<% end %>
 	<ul class="playername"><span class="name"><%="#{$player2_name}"%></span>
 		<br><br>
 		Tiles Left

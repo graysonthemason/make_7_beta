@@ -12,6 +12,20 @@ a {
 	text-decoration: none;
 	color: white;
 }
+img.right_image {
+	top: 200px;
+	position: absolute;
+}
+img.right_image {
+	position: absolute;
+	top: -30px;
+	right: 8px;
+}
+img.left_image {
+	position: absolute;
+	top: -30px;
+	left: 170px;
+}
 input.arrows {
 	color: rgb(50,50,50);
 	font-size: 1.1em;
