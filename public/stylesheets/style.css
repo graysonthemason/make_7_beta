@@ -1,50 +1,245 @@
 body, html {
-	background-color: rgb(230,240,255);
+	background-color: rgb(0,0,100);
 	color: black;
 }
-h1 {
-	margin:10px;
+h1.banner {
+	font-size: 2em;
+	margin: 10px;
+	font-family: 'Lato', sans-serif;
+	display: inline;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+a:hover {
+	color: yellow;
+}
+form.login {
+	position: relative;
+	margin: auto;
+	text-align: center;
+	float: none;
+	font-family: 'Lato', sans-serif;
+
+}
+input.login {
+	padding: 10px;
+	border-radius: 20px;
+	font-size: 1.4em;
+	margin: 10px;
+	font-family: 'Lato', sans-serif;
+
+}
+div.winner {
+position: relative;
+top: -600px;
+background-color: rgba(255, 255, 255, .9);
+border-radius: 40px;
+box-shadow: 4px 4px 40px rgba(0,0,0,.7);
+z-index: 400;
+height: 150px;
+margin: auto;
+max-width: 600px;
+border: solid 10px white;
+font-family: 'Lato', sans-serif;
+
+}
+
+div.player1_tiles {
+	color: white;
+	width: 240px;
+	height: 200px;
+	text-align: left;
+	background: rgba(255,255,255,.4);
+	font-size: 1.5em;
+	float: top;
+	right: 50%;
+	margin-right: 360px;
+	position: absolute;
+	border-radius: 20px;
+    box-shadow: 4px 4px 40px rgba(0,0,0,.4);
+	z-index: 500;
+	border-top: solid red 58px
+}
+ul.playername {
+margin-top: -50px;
+text-align: center;
+padding: 0;
+list-style: none;
+}
+span.name {
+	font-size: 1.4em;
+	text-align: center;
+margin-bottom: 30px;
+
+}
+div.player2_tiles {
+	color: white;
+	width: 240px;
+	height: 200px;
+	text-align: left;
+	background: rgba(255,255,255,.4);
+	font-size: 1.5em;
+	float: top;
+	left: 50%;
+	margin-left: 360px;
+	position: absolute;
+	border-radius: 20px;
+    box-shadow: 4px 4px 40px rgba(0,0,0,.4);
+	z-index: 600;
+	border-top: solid red 58px
 }
 div.game_wrap {
 	padding: 0;
-    /*border: solid 2px grey;*/
-    width: 708px;
+    width: 700px;
     margin: auto;
-    height: 700px;
-    box-shadow: 6px 6px 12px;
+    margin-bottom: 20px;
+    height: 630px;
+    box-shadow: 4px 4px 40px;
+    position: relative;
+    border-right: solid 10px rgb(200,200,200);
 }
-
 div.button-wrap {
-    box-shadow: 6px 6px 12px;
-
-	padding:5px 0px;
-	width: 708px;
-	height: 24px;
-	background-color: lightblue;
+	border-radius: 20px 20px 0 0;
+    /*box-shadow: 4px 4px 40px;*/
+	padding: 5px 0px;
+	width: 710px;
+	height: 48px;
+	background-color: red;
 	margin:auto;
 	position:relative;
+	z-index: 600;
+}
+form.button1 {
+	position: absolute;
+	left: 20px;
 
 }
+form.button2 {
+	position: absolute;
+	left: 100px;
+
+}
+form.button3 {
+	position: absolute;
+	left: 200px;
+
+}
+form.button4 {
+	position: absolute;
+	left: 300px;
+
+}
+form.button5 {
+	position: absolute;
+	left: 400px;
+
+}
+form.button6 {
+	position: absolute;
+	left: 500px;
+
+}
+form.button7 {
+	position: absolute;
+	left: 600px;
+}
+
 form {
 	position: relative;
 	float:left;
 	margin-left: 9px;
 }
+div.red1{
+	box-shadow: 0px 0px 2px;
+
+	position: absolute;
+	left: -10px;
+	bottom: 175px;
+	width: 90px;
+	height: 80px;
+	border: solid 10px red;
+	z-index: 300;
+}
+div.red2{
+	box-shadow: 0px 0px 2px;
+	position: absolute;
+	left: -10px;
+	bottom: 355px;
+	width: 90px;
+	height: 80px;
+	border: solid 10px red;
+	z-index: 300;
+}
+div.red3{
+	box-shadow: 0px 0px 2px;
+
+	position: absolute;
+	left: -10px;
+	bottom: 445px;
+	width: 90px;
+	height: 80px;
+	border: solid 10px red;
+	z-index: 300;
+}
+div.red4{
+	box-shadow: 0px 0px 2px;
+	position: absolute;
+	left: -10px;
+	bottom: 265px;
+	width: 90px;
+	height: 80px;
+	border: solid 10px red;
+	z-index: 300;
+}
+div.red5{
+	box-shadow: 0px 0px 2px;
+	position: absolute;
+	left: -10px;
+	bottom: 445px;
+	width: 90px;
+	height: 80px;
+	border: solid 10px red;
+	z-index: 300;
+}
+div.red6{
+	box-shadow: 0px 0px 2px;
+	position: absolute;
+	left: -10px;
+	bottom: 355px;
+	width: 90px;
+	height: 80px;
+	border: solid 10px red;
+	z-index: 300;
+}
+div.red7{
+	box-shadow: 0px 0px 2px;
+	position: absolute;
+	left: -10px;
+	bottom: 175px;
+	width: 90px;
+	height: 80px;
+	border: solid 10px red;
+	z-index: 300;
+}
 div.col {
 	position: relative;
 	margin:0px;
-    border-left: solid 1px lightgrey;
-	width: 100px;
+    border-left: solid 10px rgb(200,200,200);
+	width: 90px;
 	height: 100%;
 	float: left;
-
-	background: white;
+	background: rgba(255, 255, 255, 1);
 	text-align: center;
-	/*border-collapse:collapse;*/
 
 }
 div.tile_show {
+
 	border-radius: 8px;
+	text-shadow: 1px 1px 1px black;
+	left: -1px;
+	bottom: 1px;
 	border-width:1px;	
     border-style: solid;
 	position: relative;
@@ -55,111 +250,72 @@ div.tile_show {
 	margin: -3px, -3px -3px 0px;
 }
 div.tile_show2 {
+	bottom: 1px;
 	border-radius: 8px;
+	text-shadow: 1px 1px 1px black;
 	border-width: 1px;	
     border-style: solid;
     border-color: black;
 	position: relative;
-	background-color: red;
+	background-color: rgb(255,230,0);
 	width: 100%;
 	height: 100%;
 	z-index: 100;
 	color: white;
 	margin: -3px, -1px -3px -3px;
-	
-
+	left: -1px;
 }
 span.tiletext {
-	/*background-color: white;*/
 	width: 100%;
 	height: 16px;
 }
-div.tile1 {
-	font-size: 6em;
-	text-align: center;
-	/*margin: 0 auto 0 auto;*/
-	/*background-color: yellow;*/
+div {
 	width: 100%;
 	height: 14.27%;
-	float: bottom;
-	/*display: block;*/
 	position: absolute;
+	float: bottom;
+	text-align: center;
+}
+div.tile1 {
+	font-size: 5.2em;
 	bottom: 0px;
-	
-	/*vertical-align: bottom;*/
+
 }
 div.tile2 {
-	font-size: 6em;
-	text-align: center;
-	/*background-color: yellow;*/
-	width: 100%;
-	height: 14.27%;
-	float: bottom;
-	/*display: block;*/
-	position: absolute;
-	bottom: 100px;
-	
-
-	/*vertical-align: bottom;*/
+	font-size: 5.2em;
+	bottom: 90px;
 }
 div.tile3 {
-		font-size: 6em;
-	text-align: center;
-	/*background-color: yellow;*/
-	width: 100%;
-	height: 14.27%;
-	float: bottom;
-	/*display: block;*/
-	position: absolute;
-	bottom: 200px;
-	/*vertical-align: bottom;*/
+	font-size: 5.2em;
+	bottom: 180px;
 }
 div.tile4 {
-		font-size: 6em;
-	text-align: center;
-	/*background-color: yellow;*/
-	width: 100%;
-	height: 14.27%;
-	float: bottom;
-	/*display: block;*/
-	position: absolute;
-	bottom: 300px;
-	/*vertical-align: bottom;*/
+	font-size: 5.2em;
+	bottom: 270px;
 }
 
 div.tile5 {
-		font-size: 6em;
-	text-align: center;
-	/*background-color: yellow;*/
-	width: 100%;
-	height: 14.27%;
-	float: bottom;
-	/*display: block;*/
-	position: absolute;
-	bottom: 400px;
-	/*vertical-align: bottom;*/
+	font-size: 5.2em;
+	bottom: 360px;
 }
 div.tile6 {
-	font-size: 6em;
-	text-align: center;
-	/*background-color: yellow;*/
-	width: 100%;
-	height: 14.27%;
-	float: bottom;
-	/*display: block;*/
-	position: absolute;
-	bottom: 500px;
-	/*vertical-align: bottom;*/
+	font-size: 5.2em;
+	bottom: 450px;
 }
 div.tile7 {
-		font-size: 6em;
+	font-size: 5.2em;
+	bottom: 540px;
+}
+div.login_form {
+	margin: auto;
+	background-color: rgba(255,255,255,.5);
+	max-width: 600px;
 	text-align: center;
-	/*background-color: yellow;*/
-	width: 100%;
-	height: 14.27%;
-	float: bottom;
-	/*display: block;*/
-	position: absolute;
-	bottom: 600px;
-	/*vertical-align: bottom;*/
+	height: 300px;
+	border-radius: 60px;
+	position: relative;
+	margin-top: 60px;
+	padding: 50px;
+	border: 10px white solid;
+	box-shadow: 2px 2px 20px;
 }

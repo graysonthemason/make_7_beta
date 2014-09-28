@@ -1,105 +1,167 @@
+
+</div>
+
+<div class="player1_tiles">
+	<ul class="playername"><span class="name"><%="#{$player1_name}"%></span>
+		<br><br>
+		Tiles Left
+		<li>1: <%=$player1tiles[0]%></li>
+		<li>2: <%=$player1tiles[1]%></li>
+		<li>3: <%=$player1tiles[2]%></li>
+		<br>
+	Wins: <%=$player_1_wins%>
+	</ul>
+</div>
+<div class="player2_tiles">
+	<ul class="playername"><span class="name"><%="#{$player2_name}"%></span>
+		<br><br>
+		Tiles Left
+		<li>1: <%=$player2tiles[0]%></li>
+		<li>2: <%=$player2tiles[1]%></li>
+		<li>3: <%=$player2tiles[2]%></li>
+		<br>
+	Wins: <%=$player_2_wins%>
+	</ul>
+</div>
 <div class="button-wrap">
-	<form class="button_column" action="/column1" method="post">
-		<select name="number">
-      <option value="1">
-       1
-      </option>
-      <option value="2">
-       2
-      </option>
-      <option value="3">
-       3
-      </option>
-  </select>
+	<form class="button1" action="/column1" method="post">
+	<% if $column1 %>
+	<select name="number">
+		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
+      			<option value="1">1</option>
+      		<% end %>
+      		<% if ($turn == false && $player2tiles[1] >= 1) || ($turn && $player1tiles[1] >= 1) %>
+      			<option value="2">2</option>
+      		<% end %>
+      		<% if $player1[0].count == 2 %>
+      			<% if ($turn == false && $player2tiles[2] >= 1) || ($turn && $player1tiles[2] >= 1) %>
+      				<option value="3">3</option>
+      			<% end %>
+      		<% end %>
+      		</select>
+  		<br>
   		<input type="submit" value="Play">
+	<% end %>
   	</form>
-  		<form class="button_column" action="/column2" method="post">
+  	<form class="button2" action="/column2" method="post">
+	<% if $column2 %>
+	<select name="number">
+		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
+      			<option value="1">1</option>
+      		<% end %>
+      		<% if ($turn == false && $player2tiles[1] >= 1) || ($turn && $player1tiles[1] >= 1) %>
+      			<option value="2">2</option>
+      		<% end %>
+      		<% if $player1[1].count == 4 %>
+      			<% if ($turn == false && $player2tiles[2] >= 1) || ($turn && $player1tiles[2] >= 1) %>
+      				<option value="3">3</option>
+      			<% end %>
+      		<% end %>
+      		</select>
+  		<br>
+		<input type="submit" value="Play">
+	<% end %>
+  	</form>
+	<form class="button3" action="/column3" method="post">
+		<% if $column3 %>
 		<select name="number">
-      <option value="1">
-       1
-      </option>
-      <option value="2">
-       2
-      </option>
-      <option value="3">
-       3
-      </option>
-  </select>
+			<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
+      			<option value="1">1</option>
+      		<% end %>
+      		<% if ($turn == false && $player2tiles[1] >= 1) || ($turn && $player1tiles[1] >= 1) %>
+      			<option value="2">2</option>
+      		<% end %>
+      		<% if $player1[2].count == 5 %>
+      			<% if ($turn == false && $player2tiles[2] >= 1) || ($turn && $player1tiles[2] >= 1) %>
+      				<option value="3">3</option>
+      			<% end %>
+      		<% end %>
+  		</select>
+  		<br>
   		<input type="submit" value="Play">
+		<% end %>
   	</form>
-  			<form class="button_column" action="/column3" method="post">
+	<form class="button4" action="/column4" method="post">
+		<% if $column4 %>
 		<select name="number">
-      <option value="1">
-       1
-      </option>
-      <option value="2">
-       2
-      </option>
-      <option value="3">
-       3
-      </option>
-  </select>
-  		<input type="submit" value="Play">
+		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
+      			<option value="1">1</option>
+      		<% end %>
+      		<% if ($turn == false && $player2tiles[1] >= 1) || ($turn && $player1tiles[1] >= 1) %>
+      			<option value="2">2</option>
+      		<% end %>
+      		<% if $player1[3].count == 3 %>
+      			<% if ($turn == false && $player2tiles[2] >= 1) || ($turn && $player1tiles[2] >= 1) %>
+      				<option value="3">3</option>
+      			<% end %>
+      		<% end %>
+      		</select>
+	  		<br>
+			<input type="submit" value="Play">
+		<% end %>
   	</form>
-  			<form class="button_column" action="/column4" method="post">
+	<form class="button5" action="/column5" method="post">
+		<% if $column5 %>
 		<select name="number">
-      <option value="1">
-       1
-      </option>
-      <option value="2">
-       2
-      </option>
-      <option value="3">
-       3
-      </option>
-  </select>
-  		<input type="submit" value="Play">
+		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
+      			<option value="1">1</option>
+      		<% end %>
+      		<% if ($turn == false && $player2tiles[1] >= 1) || ($turn && $player1tiles[1] >= 1) %>
+      			<option value="2">2</option>
+      		<% end %>
+      		<% if $player1[4].count == 5 %>
+      			<% if ($turn == false && $player2tiles[2] >= 1) || ($turn && $player1tiles[2] >= 1) %>
+      				<option value="3">3</option>
+      			<% end %>
+      		<% end %>
+      		</select>
+		  	<br>
+	  		<input type="submit" value="Play">
+		<% end %>
   	</form>
-  			<form class="button_column" action="/column5" method="post">
+	<form class="button6" action="/column6" method="post">
+		<% if $column6 %>
 		<select name="number">
-      <option value="1">
-       1
-      </option>
-      <option value="2">
-       2
-      </option>
-      <option value="3">
-       3
-      </option>
-  </select>
-  		<input type="submit" value="Play">
+				<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
+      			<option value="1">1</option>
+      		<% end %>
+      		<% if ($turn == false && $player2tiles[1] >= 1) || ($turn && $player1tiles[1] >= 1) %>
+      			<option value="2">2</option>
+      		<% end %>
+      		<% if $player1[5].count == 4 %>
+      			<% if ($turn == false && $player2tiles[2] >= 1) || ($turn && $player1tiles[2] >= 1) %>
+      				<option value="3">3</option>
+      			<% end %>
+      		<% end %>
+      		</select>
+			<br>
+	  		<input type="submit" value="Play">
+		<% end %>
   	</form>
-  			<form class="button_column" action="/column6" method="post">
+	<form class="button7" action="/column7" method="post">
+		<% if $column7 %>
 		<select name="number">
-      <option value="1">
-       1
-      </option>
-      <option value="2">
-       2
-      </option>
-      <option value="3">
-       3
-      </option>
-  </select>
+		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
+      			<option value="1">1</option>
+      		<% end %>
+      		<% if ($turn == false && $player2tiles[1] >= 1) || ($turn && $player1tiles[1] >= 1) %>
+      			<option value="2">2</option>
+      		<% end %>
+      		<% if $player1[6].count == 2 %>
+      			<% if ($turn == false && $player2tiles[2] >= 1) || ($turn && $player1tiles[2] >= 1) %>
+      				<option value="3">3</option>
+      			<% end %>
+      		<% end %>
+      		</select>
+		<br>
   		<input type="submit" value="Play">
+		<% end %>
   	</form>
-  			<form class="button_column" action="/column7" method="post">
-		<select name="number">
-      <option value="1">
-       1
-      </option>
-      <option value="2">
-       2
-      </option>
-      <option value="3">
-       3
-      </option>
-  </select>
-  		<input type="submit" value="Play">
-  	</form>
-	</div>
+</div>
+
 <div class="game_wrap">
 <div class="col">
+	<div class="red1"></div>
 	<div class="tile7">
 		<%if $player1[0][6] && $player1[0][6] > 0%> 
 		<div class="tile_show"><span class="tiletext"><%=$player1[0][6]%></span></div> 
@@ -151,6 +213,7 @@
 	</div>
 </div>
 <div class="col">
+	<div class="red2"></div>
 	<div class="tile7">
 		<%if $player1[1][6] && $player1[1][6] > 0%>
 		<div class="tile_show"><span class="tiletext"><%=$player1[1][6]%></span></div> 
@@ -202,6 +265,7 @@
 	</div>
 </div>
 <div class="col">
+	<div class="red3"></div>
 	<div class="tile7">
 		<%if $player1[2][6] && $player1[2][6] > 0%>
 		<div class="tile_show"><span class="tiletext"><%=$player1[2][6]%></span></div>
@@ -253,6 +317,7 @@
 	</div>	
 </div>
 <div class="col">
+	<div class="red4"></div>
 	<div class="tile7">
 		<%if $player1[3][6] && $player1[3][6] > 0%>
 		<div class="tile_show"><span class="tiletext"><%=$player1[3][6]%></span></div>
@@ -304,6 +369,7 @@
 	</div>	
 </div>
 <div class="col">
+	<div class="red5"></div>
 		<div class="tile7">
 		<%if $player1[4][6] && $player1[4][6] > 0%>
 		<div class="tile_show"><span class="tiletext"><%=$player1[4][6]%></span></div>
@@ -355,6 +421,7 @@
 	</div>
 </div>
 <div class="col">
+	<div class="red6"></div>
 		<div class="tile7">
 		<%if $player1[5][6] && $player1[5][6] > 0%>
 		<div class="tile_show"><span class="tiletext"><%=$player1[5][6]%></span></div>
@@ -406,6 +473,7 @@
 	</div>
 </div>
 <div class="col">
+	<div class="red7"></div>
 	<div class="tile7">
 		<%if $player1[6][6] && $player1[6][6] > 0%>
 		<div class="tile_show"><span class="tiletext"><%=$player1[6][6]%></span></div>
@@ -457,3 +525,8 @@
 	</div>
 </div>
 </div>
+<%if $winner%>
+<div class="winner">
+<h1><%=$winner%> Wins!!!</h1>
+<a href='/new_game' ><button>PLAY AGAIN!</button></a>
+<%end%>
