@@ -63,15 +63,15 @@ div.player1_tiles {
 	border-top: solid red 58px
 }
 ul.playername {
-margin-top: -50px;
-text-align: center;
-padding: 0;
-list-style: none;
+	margin-top: -50px;
+	text-align: center;
+	padding: 0;
+	list-style: none;
 }
 span.name {
 	font-size: 1.4em;
 	text-align: center;
-margin-bottom: 30px;
+	margin-bottom: 30px;
 
 }
 div.player2_tiles {

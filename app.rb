@@ -1,6 +1,5 @@
 require 'sinatra/base'
-require 'pry'
-require 'rubocop'
+
 
 class App < Sinatra::Base
 
@@ -164,6 +163,9 @@ class App < Sinatra::Base
     render(:erb, :login)
   end
 
+get('/rules') do
+  render(:erb, :rules)
+end
 
   get('/game') do
     redirect to('/') if $player1_name == nil || $player2_name == nil
