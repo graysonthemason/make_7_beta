@@ -12,6 +12,22 @@ a {
 	text-decoration: none;
 	color: white;
 }
+input.arrows {
+	color: rgb(50,50,50);
+	font-size: 1.1em;
+	border-radius: 8px;
+	background-color: white;
+	font-weight: bolder;
+}
+input.arrows:hover {
+	color: rgb(110,110,110);
+	background-color: yellow;
+}
+select.numbers {
+	margin-left: 4px;
+	font-size: 1.2em;
+	padding: 10px;
+}
 a:hover {
 	color: yellow;
 }
@@ -21,29 +37,69 @@ form.login {
 	text-align: center;
 	float: none;
 	font-family: 'Lato', sans-serif;
-
 }
+
+
+input.login_button {
+	padding: 10px;
+	border-radius: 20px;
+	font-size: 1.4em;
+	margin: 10px;
+	background: white;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	color: red;
+}
+input.login_button:hover {
+	padding: 10px;
+	border-radius: 20px;
+	font-size: 1.4em;
+	margin: 10px;
+	background: red;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	color: white;
+}
+button.login_button {
+	padding: 10px;
+	border-radius: 20px;
+	font-size: 1.4em;
+	margin: 10px;
+	background: white;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	color: red;	
+}
+button.login_button:hover {
+	padding: 10px;
+	border-radius: 20px;
+	font-size: 1.4em;
+	margin: 10px;
+	background: red;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	color: white;
+}
+
 input.login {
 	padding: 10px;
 	border-radius: 20px;
 	font-size: 1.4em;
 	margin: 10px;
 	font-family: 'Lato', sans-serif;
-
 }
 div.winner {
-position: relative;
-top: -600px;
-background-color: rgba(255, 255, 255, .9);
-border-radius: 40px;
-box-shadow: 4px 4px 40px rgba(0,0,0,.7);
-z-index: 400;
-height: 150px;
-margin: auto;
-max-width: 600px;
-border: solid 10px white;
-font-family: 'Lato', sans-serif;
-
+	position: relative;
+	top: -600px;
+	background-color: rgba(255, 255, 255, .9);
+	border-radius: 20px;
+	box-shadow: 4px 4px 40px rgba(0,0,0,.7);
+	z-index: 400;
+	margin: auto;
+	max-width: 500px;
+	border: solid 10px white;
+	font-family: 'Lato', sans-serif;
+	padding:20px;
 }
 
 div.player1_tiles {
@@ -60,7 +116,8 @@ div.player1_tiles {
 	border-radius: 20px;
     box-shadow: 4px 4px 40px rgba(0,0,0,.4);
 	z-index: 500;
-	border-top: solid red 58px
+	border-top: solid red 58px;
+	border-bottom: none;
 }
 ul.playername {
 	margin-top: -50px;
@@ -88,7 +145,8 @@ div.player2_tiles {
 	border-radius: 20px;
     box-shadow: 4px 4px 40px rgba(0,0,0,.4);
 	z-index: 600;
-	border-top: solid red 58px
+	border-top: solid red 58px;
+	border-bottom: none;
 }
 div.game_wrap {
 	padding: 0;
@@ -113,37 +171,31 @@ div.button-wrap {
 }
 form.button1 {
 	position: absolute;
-	left: 20px;
-
+	left: 22px;
 }
 form.button2 {
 	position: absolute;
-	left: 100px;
-
+	left: 122px;
 }
 form.button3 {
 	position: absolute;
-	left: 200px;
-
+	left: 222px;
 }
 form.button4 {
 	position: absolute;
-	left: 300px;
-
+	left: 322px;
 }
 form.button5 {
 	position: absolute;
-	left: 400px;
-
+	left: 422px;
 }
 form.button6 {
 	position: absolute;
-	left: 500px;
-
+	left: 522px;
 }
 form.button7 {
 	position: absolute;
-	left: 600px;
+	left: 622px;
 }
 
 form {
@@ -153,7 +205,6 @@ form {
 }
 div.red1{
 	box-shadow: 0px 0px 2px;
-
 	position: absolute;
 	left: -10px;
 	bottom: 175px;
@@ -174,7 +225,6 @@ div.red2{
 }
 div.red3{
 	box-shadow: 0px 0px 2px;
-
 	position: absolute;
 	left: -10px;
 	bottom: 445px;
@@ -235,7 +285,6 @@ div.col {
 
 }
 div.tile_show {
-
 	border-radius: 8px;
 	text-shadow: 1px 1px 1px black;
 	left: -1px;
@@ -248,6 +297,7 @@ div.tile_show {
 	height: 100%;
 	z-index: 100;
 	margin: -3px, -3px -3px 0px;
+/*	border: solid 2px grey;*/
 }
 div.tile_show2 {
 	bottom: 1px;
@@ -270,6 +320,7 @@ span.tiletext {
 	height: 16px;
 }
 div {
+	border-bottom: solid 1px rgb(200,200,200);
 	width: 100%;
 	height: 14.27%;
 	position: absolute;
@@ -306,16 +357,32 @@ div.tile7 {
 	font-size: 5.2em;
 	bottom: 540px;
 }
+h4 {
+	margin: 0px;
+}
 div.login_form {
 	margin: auto;
 	background-color: rgba(255,255,255,.5);
-	max-width: 600px;
+	max-width: 500px;
 	text-align: center;
 	height: 300px;
+	border-radius: 60px;
+	position: relative;
+	margin-top: 80px;
+	padding: 50px;
+	border: 10px white solid;
+	box-shadow: 4px 4px 26px;
+}
+div.rules {
+	margin: auto;
+	background-color: rgba(255,255,255,.5);
+	max-width: 600px;
 	border-radius: 60px;
 	position: relative;
 	margin-top: 60px;
 	padding: 50px;
 	border: 10px white solid;
-	box-shadow: 2px 2px 20px;
+	box-shadow: 4px 4px 26px;
+	text-align: left;
+	padding-bottom: 40px;
 }

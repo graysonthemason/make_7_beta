@@ -22,6 +22,9 @@
       <% if $player1_name && $player2_name %>
       <h1 class="banner"><a href='/new_game'>New Game</a></h1>
       <%end%>
+      <% if $player1_name && $player2_name %>
+      <h1 class="banner"><a href='/rules'>Rules</a></h1>
+      <%end%>
     </header>
     <%= yield %>
   </body>

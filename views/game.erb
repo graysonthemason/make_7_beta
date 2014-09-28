@@ -1,6 +1,4 @@
 
-</div>
-
 <div class="player1_tiles">
 	<ul class="playername"><span class="name"><%="#{$player1_name}"%></span>
 		<br><br>
@@ -26,7 +24,7 @@
 <div class="button-wrap">
 	<form class="button1" action="/column1" method="post">
 	<% if $column1 %>
-	<select name="number">
+	<select class="numbers" name="number">
 		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
       			<option value="1">1</option>
       		<% end %>
@@ -40,12 +38,12 @@
       		<% end %>
       		</select>
   		<br>
-  		<input type="submit" value="Play">
+  		<input class="arrows" type="submit" value="Play">
 	<% end %>
   	</form>
   	<form class="button2" action="/column2" method="post">
 	<% if $column2 %>
-	<select name="number">
+	<select class="numbers" name="number">
 		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
       			<option value="1">1</option>
       		<% end %>
@@ -59,12 +57,12 @@
       		<% end %>
       		</select>
   		<br>
-		<input type="submit" value="Play">
+		<input class="arrows" type="submit" value="Play">
 	<% end %>
   	</form>
 	<form class="button3" action="/column3" method="post">
 		<% if $column3 %>
-		<select name="number">
+		<select class="numbers" name="number">
 			<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
       			<option value="1">1</option>
       		<% end %>
@@ -78,12 +76,12 @@
       		<% end %>
   		</select>
   		<br>
-  		<input type="submit" value="Play">
+  		<input class="arrows" type="submit" value="Play">
 		<% end %>
   	</form>
 	<form class="button4" action="/column4" method="post">
 		<% if $column4 %>
-		<select name="number">
+		<select class="numbers" name="number">
 		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
       			<option value="1">1</option>
       		<% end %>
@@ -97,12 +95,12 @@
       		<% end %>
       		</select>
 	  		<br>
-			<input type="submit" value="Play">
+			<input class="arrows" type="submit" value="Play">
 		<% end %>
   	</form>
 	<form class="button5" action="/column5" method="post">
 		<% if $column5 %>
-		<select name="number">
+		<select class="numbers" name="number">
 		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
       			<option value="1">1</option>
       		<% end %>
@@ -116,12 +114,12 @@
       		<% end %>
       		</select>
 		  	<br>
-	  		<input type="submit" value="Play">
+	  		<input class="arrows" type="submit" value="Play">
 		<% end %>
   	</form>
 	<form class="button6" action="/column6" method="post">
 		<% if $column6 %>
-		<select name="number">
+		<select class="numbers" name="number">
 				<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
       			<option value="1">1</option>
       		<% end %>
@@ -135,12 +133,12 @@
       		<% end %>
       		</select>
 			<br>
-	  		<input type="submit" value="Play">
+	  		<input class="arrows" type="submit" value="Play">
 		<% end %>
   	</form>
 	<form class="button7" action="/column7" method="post">
 		<% if $column7 %>
-		<select name="number">
+		<select class="numbers" name="number">
 		<% if ($turn == false && $player2tiles[0] >= 1) || ($turn && $player1tiles[0] >= 1) %>
       			<option value="1">1</option>
       		<% end %>
@@ -154,7 +152,7 @@
       		<% end %>
       		</select>
 		<br>
-  		<input type="submit" value="Play">
+  		<input class="arrows" type="submit" value="Play">
 		<% end %>
   	</form>
 </div>
@@ -528,5 +526,5 @@
 <%if $winner%>
 <div class="winner">
 <h1><%=$winner%> Wins!!!</h1>
-<a href='/new_game' ><button>PLAY AGAIN!</button></a>
+<a href='/new_game' ><button class="login_button">PLAY AGAIN!</button></a>
 <%end%>
