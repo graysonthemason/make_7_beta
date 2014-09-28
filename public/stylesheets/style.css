@@ -34,7 +34,7 @@ input.arrows {
 	font-weight: bolder;
 }
 input.arrows:hover {
-	color: rgb(110,110,110);
+	/*color: rgb(110,110,110);*/
 	background-color: yellow;
 }
 select.numbers {
