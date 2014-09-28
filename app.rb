@@ -158,8 +158,11 @@ class App < Sinatra::Base
 
 
   get('/') do
+    reset_values
     $player1_name = nil
     $player2_name = nil
+    $player_1_wins = 0
+    $player_2_wins = 0
     render(:erb, :login)
   end
 

@@ -22,6 +22,7 @@
 	</ul>
 </div>
 <div class="button-wrap">
+	<%unless $winner%>
 	<form class="button1" action="/column1" method="post">
 	<% if $column1 %>
 	<select class="numbers" name="number">
@@ -155,6 +156,7 @@
   		<input class="arrows" type="submit" value="Play">
 		<% end %>
   	</form>
+  	<%end%>
 </div>
 
 <div class="game_wrap">
